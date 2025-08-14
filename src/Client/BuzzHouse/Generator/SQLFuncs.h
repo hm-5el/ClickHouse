@@ -884,6 +884,7 @@ const std::vector<CHFunction> CHFuncs = {
     CHFunction(SQLFunc::FUNCtryBase32Decode, 0, 0, 1, 1),
     CHFunction(SQLFunc::FUNCbech32Encode, 0, 0, 1, 3),
     CHFunction(SQLFunc::FUNCbech32Decode, 0, 0, 1, 1),
+    CHFunction(SQLFunc::FUNCisValidASCII, 0, 0, 1, 1),
     /// Timeseries
     CHFunction(SQLFunc::FUNCseriesOutliersDetectTukey, 0, 0, 1, 1),
     CHFunction(SQLFunc::FUNCseriesPeriodDetectFFT, 0, 0, 1, 1),
