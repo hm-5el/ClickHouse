@@ -680,6 +680,40 @@ Result:
 └───────────┘
 ```
 
+## isValidASCII {#isvalidascii}
+
+Returns 1, if the set of bytes constitutes valid ASCII-encoded text, otherwise 0.
+
+**Syntax**
+
+```sql
+isValidASCII(input)
+```
+
+Alias: `isASCII`
+
+**Parameters**
+
+- `input` — A string type [String](../data-types/string.md).
+
+**Returned value**
+
+- Returns `1`, if the set of bytes constitutes valid ASCII-encoded text, otherwise `0`.
+
+Query:
+
+```sql
+SELECT isValidASCII('\x7F\x00') AS valid, isValidASCII('\xc3\xb1') AS invalid;
+```
+
+Result:
+
+```response
+┌─valid─┬─invalid─┐
+│     1 │       0 │
+└───────┴─────────┘
+```
+
 ## isValidUTF8 {#isvalidutf8}
 
 Returns 1, if the set of bytes constitutes valid UTF-8-encoded text, otherwise 0.
