@@ -1,10 +1,11 @@
-#include <algorithm>
 #include <DataTypes/DataTypeString.h>
 #include <Functions/FunctionFactory.h>
 #include <Functions/FunctionStringOrArrayToT.h>
-#include "base/types.h"
 
 #include <base/simd.h>
+#include <base/types.h>
+
+#include <algorithm>
 
 #if defined(__AVX512F__) || defined(__AVX__) && defined(__AVX2__)
 #    include <immintrin.h>
