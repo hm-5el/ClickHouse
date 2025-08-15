@@ -1,0 +1,6 @@
+<test>
+    <create_query>CREATE TABLE long_text (`id` UInt64, `text` String) ENGINE = MergeTree ORDER BY id;</create_query>
+    <fill_query>INSERT INTO long_text SELECT 1, randomPrintableASCII(500000000);</fill_query>
+    <query>select isValidASCII(text) from long_text;</query>
+    <drop_query>DROP TABLE IF EXISTS long_text;</drop_query>
+</test>

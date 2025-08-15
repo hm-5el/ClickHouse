@@ -1570,6 +1570,7 @@ enum SQLFunc {
     FUNCYYYYMMDDToDate = 1565;
     FUNCYYYYMMDDToDate32 = 1566;
     FUNCzookeeperSessionUptime = 1567;
+    FUNCisValidASCII = 1568;
 }
 
 enum SQLTableFunc {
